@@ -13,7 +13,46 @@
     </header>
     <main>
       <form>
+        <section>
+          <legend>Customer details</legend>
+        <ul>
+          <li>
+             <label for="name">
+              <span>Name: </span>
+              <strong><span aria-label="required">*</span></strong>
+              </label>
+              <input 
+                type="text"
+                id="name"
+                name="name"
+                required
+                minlength="2"
+                size="10" />
+          </li>
+          <li>
+              <label for="email">Enter your email:</label>
+              <input type="email" id="email" size="30" required />
+          </li>
+        </ul>
+        </section>
+        <section>
+          <legend>T-shirt color & size</legend>
+          <ul>
+            <li></li>
+            <li></li>
+          </ul>
+        </section>
+        <button type="button">Submit</button>
         <!-- write your html here-->
+        
+        <!-- 
+        section1 - legend: customer details
+          name* (at least 2 letters, no numbers)
+          email* (built in validation)
+        section2 - legend: T-shirt color & size
+          t-shirt color* (only give 3 options /w radio button)
+          t-shirt size* (6 options radio button)
+        -->
         <!-- 
           try writing out the requirements first as comments
         this will also help you fill in your PR message later-->
