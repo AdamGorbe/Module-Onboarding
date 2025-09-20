@@ -6,9 +6,11 @@
     <title>My form exercise</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>input {
-  margin: 10px;
-}</style>
+    <style>
+      input {
+        margin: 10px;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -18,91 +20,160 @@
       <form>
         <section>
           <legend>Customer details</legend>
-        <ul>
-          <li>
-             <label for="name">
+          <ul>
+            <li>
+              <label for="name">
                 <span>Name</span>
                 <strong><span aria-label="required">*</span></strong>
                 <span>:</span>
               </label>
-              <input type="text" id="name" name="name" required 
-              minlength="2" size="10" pattern="[\p{L}\.\- ]+" />
-          </li>
-          <li>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                minlength="2"
+                size="10"
+                pattern="[\p{L}\.\- ]+"
+              />
+            </li>
+            <li>
               <label for="email">Enter your email:</label>
-                <strong><span aria-label="required">*</span></strong>
-              <input type="email" id="email"  size="30" required />
-          </li>
-        </ul>
+              <strong><span aria-label="required">*</span></strong>
+              <input type="email" id="email" size="30" required />
+            </li>
+          </ul>
         </section>
         <section>
           <legend>T-shirt color & size</legend>
           <ul>
-            <li>  
+            <li>
               <fieldset>
-    <legend>T-shirt color</legend>
-    <ul >
-      <li>
-        <label for="red">
-          <input type="radio" id="red" name="color" value="red" required />
-          red 
-        </label>
-      </li>
-      <li>
-        <label for="blue">
-          <input type="radio" id="blue" name="color" value="blue" required />
-          blue
-        </label>
-      </li>
-      <li>
-        <label for="green">
-          <input type="radio" id="green" name="color" value="green" required />
-          green
-        </label>
-      </li>
-    </ul>
-  </fieldset>
-</li>
-            <li><fieldset>
-    <legend>T-shirt size</legend>
-    <ul>
-      <li>
-        <label for="XS" style="padding-bottom: 10px;">
-          <input type="radio" id="XS" name="size" value="XS" required />
-          XS
-        </label>
-      </li>
-      <li>
-        <label for="S">
-          <input type="radio" id="S" name="size" value="S" required />
-          S
-        </label>
-      </li>
-      <li>
-        <label for="M">
-          <input type="radio" id="M" name="size" value="M" required />
-          M
-        </label>
-      </li>
-      <li><label for="L">
-          <input type="radio" id="L" name="size" value="L" required />
-          L
-        </label></li>
-        <li><label for="XL">
-          <input type="radio" id="XL" name="size" value="XL" required />
-          XL
-        </label></li>
-        <li><label for="XXL">
-          <input type="radio" id="XXL" name="size" value="XXL" required />
-          XXL
-        </label></li>
-    </ul>
-  </fieldset></li>
+                <legend>T-shirt color</legend>
+                <ul>
+                  <li>
+                    <label for="red">
+                      <input
+                        type="radio"
+                        id="red"
+                        name="color"
+                        value="red"
+                        required
+                      />
+                      red
+                    </label>
+                  </li>
+                  <li>
+                    <label for="blue">
+                      <input
+                        type="radio"
+                        id="blue"
+                        name="color"
+                        value="blue"
+                        required
+                      />
+                      blue
+                    </label>
+                  </li>
+                  <li>
+                    <label for="green">
+                      <input
+                        type="radio"
+                        id="green"
+                        name="color"
+                        value="green"
+                        required
+                      />
+                      green
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </li>
+            <li>
+              <fieldset>
+                <legend>T-shirt size</legend>
+                <ul>
+                  <li>
+                    <label for="XS" style="padding-bottom: 10px">
+                      <input
+                        type="radio"
+                        id="XS"
+                        name="size"
+                        value="XS"
+                        required
+                      />
+                      XS
+                    </label>
+                  </li>
+                  <li>
+                    <label for="S">
+                      <input
+                        type="radio"
+                        id="S"
+                        name="size"
+                        value="S"
+                        required
+                      />
+                      S
+                    </label>
+                  </li>
+                  <li>
+                    <label for="M">
+                      <input
+                        type="radio"
+                        id="M"
+                        name="size"
+                        value="M"
+                        required
+                      />
+                      M
+                    </label>
+                  </li>
+                  <li>
+                    <label for="L">
+                      <input
+                        type="radio"
+                        id="L"
+                        name="size"
+                        value="L"
+                        required
+                      />
+                      L
+                    </label>
+                  </li>
+                  <li>
+                    <label for="XL">
+                      <input
+                        type="radio"
+                        id="XL"
+                        name="size"
+                        value="XL"
+                        required
+                      />
+                      XL
+                    </label>
+                  </li>
+                  <li>
+                    <label for="XXL">
+                      <input
+                        type="radio"
+                        id="XXL"
+                        name="size"
+                        value="XXL"
+                        required
+                      />
+                      XXL
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </li>
           </ul>
         </section>
         <button type="submit">Submit</button>
         <!-- write your html here-->
-        
+
         <!-- 
         section1 - legend: customer details
           name* (validation for only letters, dot and empty space  input)
@@ -119,7 +190,7 @@
     </main>
     <footer>
       <!-- change to your name-->
-      <h2>By HOMEWORK SOLUTION</h2>
+      <h2>By Adam Gorbe</h2>
     </footer>
   </body>
 </html>
