@@ -6,6 +6,9 @@
     <title>My form exercise</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>input {
+  margin: 10px;
+}</style>
   </head>
   <body>
     <header>
@@ -18,20 +21,16 @@
         <ul>
           <li>
              <label for="name">
-              <span>Name: </span>
-              <strong><span aria-label="required">*</span></strong>
+                <span>Name</span>
+                <strong><span aria-label="required">*</span></strong>
+                <span>:</span>
               </label>
-              <input 
-                type="text"
-                id="name"
-                name="name"
-                required
-                minlength="2"
-                size="10"
-                pattern="^[a-zÀ-ÿ ,.'-]+$" />
+              <input type="text" id="name" name="name" required 
+              minlength="2" size="10" pattern="[\p{L}\.\- ]+" />
           </li>
           <li>
               <label for="email">Enter your email:</label>
+                <strong><span aria-label="required">*</span></strong>
               <input type="email" id="email"  size="30" required />
           </li>
         </ul>
@@ -39,24 +38,25 @@
         <section>
           <legend>T-shirt color & size</legend>
           <ul>
-            <li>  <fieldset>
+            <li>  
+              <fieldset>
     <legend>T-shirt color</legend>
-    <ul>
+    <ul >
       <li>
         <label for="red">
-          <input type="radio" id="red" name="color" value="red" />
-          red
+          <input type="radio" id="red" name="color" value="red" required />
+          red 
         </label>
       </li>
       <li>
         <label for="blue">
-          <input type="radio" id="blue" name="color" value="blue" />
+          <input type="radio" id="blue" name="color" value="blue" required />
           blue
         </label>
       </li>
       <li>
         <label for="green">
-          <input type="radio" id="green" name="color" value="green" />
+          <input type="radio" id="green" name="color" value="green" required />
           green
         </label>
       </li>
@@ -67,33 +67,33 @@
     <legend>T-shirt size</legend>
     <ul>
       <li>
-        <label for="XS">
-          <input type="radio" id="XS" name="size" value="XS" />
+        <label for="XS" style="padding-bottom: 10px;">
+          <input type="radio" id="XS" name="size" value="XS" required />
           XS
         </label>
       </li>
       <li>
         <label for="S">
-          <input type="radio" id="S" name="size" value="S" />
+          <input type="radio" id="S" name="size" value="S" required />
           S
         </label>
       </li>
       <li>
         <label for="M">
-          <input type="radio" id="M" name="size" value="M" />
+          <input type="radio" id="M" name="size" value="M" required />
           M
         </label>
       </li>
       <li><label for="L">
-          <input type="radio" id="L" name="size" value="L" />
+          <input type="radio" id="L" name="size" value="L" required />
           L
         </label></li>
         <li><label for="XL">
-          <input type="radio" id="XL" name="size" value="XL" />
+          <input type="radio" id="XL" name="size" value="XL" required />
           XL
         </label></li>
         <li><label for="XXL">
-          <input type="radio" id="XXL" name="size" value="XXL" />
+          <input type="radio" id="XXL" name="size" value="XXL" required />
           XXL
         </label></li>
     </ul>
@@ -105,11 +105,12 @@
         
         <!-- 
         section1 - legend: customer details
-          name* (at least 2 letters, no numbers)
+          name* (validation for only letters, dot and empty space  input)
           email* (built in validation)
         section2 - legend: T-shirt color & size
           t-shirt color* (only give 3 options /w radio button)
-          t-shirt size* (6 options radio button)
+          t-shirt size* (6 options w/ radio button)
+          all input fields are required
         -->
         <!-- 
           try writing out the requirements first as comments
